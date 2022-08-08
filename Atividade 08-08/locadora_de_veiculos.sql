@@ -52,8 +52,8 @@ create table locadora_veiculos_veiculo(
 	km_atual varchar(45) not null,
 	primary key(placa),
 	foreign key(codigo_modelo) REFERENCES locadora_veiculos_modelo(codigo),
-	foreign key codigo_tipo_Veiculo REFERENCES locadora_veiculos_tipo_veiculo(codigo),
-	foreign key(cnpj) REFERENCES locadora_veiculos_locadora(cnpj)
+	foreign key (codigo_tipo_Veiculo) REFERENCES locadora_veiculos_tipo_veiculo(codigo),
+	foreign key(cnpj_locadora) REFERENCES locadora_veiculos_locadora(cnpj)
 );
 
 create table locadora_veiculos_cliente(
