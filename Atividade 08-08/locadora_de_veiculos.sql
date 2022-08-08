@@ -53,7 +53,7 @@ create table locadora_veiculos_veiculo(
 	primary key(placa),
 	foreign key(codigo_modelo) REFERENCES locadora_veiculos_modelo(codigo),
 	foreign key codigo_tipo_Veiculo REFERENCES locadora_veiculos_tipo_veiculo(codigo),
-	foreign key(cnpj) REFERENCES locadora_veiculos_locadora(cnpj)
+	foreign key(cnpj_locadora) REFERENCES locadora_veiculos_locadora(cnpj)
 );
 
 create table locadora_veiculos_cliente(
@@ -102,13 +102,13 @@ create table locadora_veiculos_aluguel(
 	data_prevista_entrega Date not null,
 	data_entrega Date null,
 	nome_motorista varchar(255) not null,
-	cnh_motorista varchar(2)
+	cnh_motorista varchar(2),
 	data_validade_cnh Date not null,
 	km_rodada int not null,
 	valor float null,
 	primary key(codigo),
 	foreign key(placa) REFERENCES locadora_veiculos_veiculo(placa),
-	foreign key(cnpj_locadora_origem) REFERENCES locadora_veiculos_locadora(codigo),
-	foreign key(cnpj_locadora_destino) REFERENCES locadora_veiculos_locadora(codigo),
+	foreign key(cnpj_locadora_origem) REFERENCES locadora_veiculos_locadora(cnpj),
+	foreign key(cnpj_locadora_destino) REFERENCES locadora_veiculos_locadora(cnpj),
 	foreign key(codigo_cliente) REFERENCES locadora_veiculos_cliente(codigo)
 );
