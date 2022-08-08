@@ -68,8 +68,8 @@ INSERT INTO locadora_veiculos_reserva (codigo_tipo_veiculo, codigo_cliente, data
 INSERT INTO locadora_veiculos_reserva (codigo_tipo_veiculo, codigo_cliente, data_reserva, data_retirada_veiculo) VALUES (5, 5, 16/01/2016, 16/01/2016);
 
 
-INSERT locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
-INSERT locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
-INSERT locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
-INSERT locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
-INSERT locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
+INSERT INTO locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
+INSERT INTO locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
+INSERT INTO locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
+INSERT INTO locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
+INSERT INTO locadora_veiculos_aluguel (placa, cnpj_locadora_origem, cnpj_locadora_destino, codigo_cliente, data_ ,data_prevista_entrega, data_entrega,nome_motorista,cnh_motorista, data_validade, km_rodada, valor) VALUES ();
