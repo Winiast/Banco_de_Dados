@@ -8,7 +8,7 @@ create table curso_idiomas_pessoa(
 create table curso_idiomas_telefone(
 	telefone varchar(45) not null,
 	codigo_pessoa int not null,
-	primary key(telefone, codigo_pessoa).
+	primary key(telefone, codigo_pessoa),
 	foreign key(codigo_pessoa) REFERENCES curso_idiomas_pessoa(codigo)
 );
 
