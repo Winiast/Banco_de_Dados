@@ -8,7 +8,7 @@ CREATE TABLE atividade_estado (
 CREATE TABLE atividade_cidade (
     codigo INT NOT NULL AUTO_INCREMENT,
     nome INT NOT NULL,
-    estado INT NOT NULL,
+    estado VARCHAR(2) NOT NULL,
     primary key (codigo),
     foreign key (estado) REFERENCES atividade_estado (sigla)
 );
@@ -17,8 +17,9 @@ CREATE TABLE atividade_departamento (
     codigo INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL,
     localizacao INT NOT NULL,
+    cpf_gerente VARCHAR(11) NULL,
     primary key (codigo),
-    foreign key (localizacao) REFERENCES atividade_cidade (codigo),
+    foreign key (localizacao) REFERENCES atividade_cidade (codigo)
 );
 
 CREATE TABLE atividade_projeto (
@@ -53,6 +54,7 @@ CREATE TABLE atividade_funcionario_projeto (
     foreign key (cod_projeto) REFERENCES atividade_projeto (codigo)
 );
 
-ALTER TABLE atividade_departamento ADD CONSTRAINT cpf_gerente VARCHAR(11) NULL foreign key(cpf) REFERENCES(atividade_funcionario);
+ALTER TABLE atividade_departamento ADD CONSTRAINT fk_gerente foreign key(cpf_gerente) REFERENCES atividade_funcionario(cpf);
 
-ALTER TABLE atividade_funcionario ADD CONSTRAINT cpf_surpevisor VARCHAR(11) NULL foreign key(cpf) REFERENCES(atividade_funcionario);
+ALTER TABLE atividade_funcionario ADD CONSTRAINT fk_surpevisor foreign key(cpf_surpevisor) REFERENCES atividade_funcionario(cpf);
+
