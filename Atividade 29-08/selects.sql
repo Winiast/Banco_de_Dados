@@ -34,11 +34,21 @@ WHERE
 
 -- D)
 -- SELECT
---     nome ad
+--     ad.nome
 -- FROM
 --     atividade_departamento ad
--- INNER JOIN atividade_projeto ap ON
---     ad.codigo = ap.cod_departamento;
+-- WHERE
+--     MAX(COUNT(ap.cod_departamento))
+
+-- SELECT
+--     ad.nome
+--     COUNT(ap.cod_departamento)
+-- FROM
+--     atividade_projeto ap
+-- JOIN atividade_departamento ad ON
+--     ad.codigo = ap.cod_departamento
+-- GROUP BY
+--     ad.nome
 
 -- E)
 SELECT
@@ -49,3 +59,15 @@ INNER JOIN tads21_pedro.atividade_cidade ac ON
     ad.localizacao = ac.codigo
 WHERE
     ac.estado='SP';
+
+-- F)
+SELECT
+    af.nome
+FROM
+    atividade_funcionario af
+INNER JOIN
+    atividade_departamento ad ON
+    af.cpf = ad.cpf_gerente
+WHERE
+    af.salario = (SELECT MAX(af.salario) FROM atividade_funcionario af);
+    
