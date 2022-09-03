@@ -40,7 +40,7 @@ CREATE TABLE atividade_funcionario (
     endereco VARCHAR(45) NOT NULL,
     salario FLOAT NOT NULL,
     sexo CHAR NOT NULL,
-    cpf_surpevisor VARCHAR(11) NULL,
+    cpf_supervisor VARCHAR(11) NULL,
     cod_departamento INT NOT NULL,
     primary key (cpf),
     foreign key (cod_departamento) REFERENCES atividade_departamento (codigo)
@@ -56,5 +56,5 @@ CREATE TABLE atividade_funcionario_projeto (
 
 ALTER TABLE atividade_departamento ADD CONSTRAINT fk_gerente foreign key(cpf_gerente) REFERENCES atividade_funcionario(cpf);
 
-ALTER TABLE atividade_funcionario ADD CONSTRAINT fk_surpevisor foreign key(cpf_surpevisor) REFERENCES atividade_funcionario(cpf);
+ALTER TABLE atividade_funcionario ADD CONSTRAINT fk_surpevisor foreign key(cpf_supervisor) REFERENCES atividade_funcionario(cpf);
 
