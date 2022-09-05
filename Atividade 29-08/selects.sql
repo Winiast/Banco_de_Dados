@@ -18,7 +18,7 @@ FROM
 WHERE
 	af.sexo  = 'M'
 AND
-	(DATEDIFF(NOW(), af.datanasc) /30 / 12) > 40;
+	((EXTRACT(YEAR FROM current_date)-EXTRACT(YEAR FROM af.datanasc)) >= 40);
 
 -- C)
 SELECT
