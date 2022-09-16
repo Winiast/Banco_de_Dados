@@ -1,5 +1,6 @@
 package ifpr.pagua.com.banco;
 
+import ifpr.pagua.com.banco.controllers.CadastroContato;
 import ifpr.pagua.com.banco.controllers.TelaInicial;
 import ifpr.pagua.com.banco.utils.BaseAppNavigator;
 import ifpr.pagua.com.banco.utils.ScreenRegistryFXML;
@@ -37,13 +38,14 @@ public class App extends BaseAppNavigator {
     @Override
     public void registrarTelas() {
         registraTela("TELAINICIAL", new ScreenRegistryFXML(App.class,
-                "primary.fxml", o -> new TelaInicial()));
+                "TelaInicial.fxml", o -> new TelaInicial()));
 
+        registraTela("CADASTRO", new ScreenRegistryFXML(App.class, "CadastroContato.fxml", o -> new CadastroContato()));
     }
 
-    // public void atualizaEstilo() {
-    // adicionarArquivoEstilo(getClass().getResource("styles/global.css").toExternalForm());
-    // }
+    public void atualizaEstilo() {
+        adicionarArquivoEstilo(getClass().getResource("styles/global.css").toExternalForm());
+    }
 
     public static void main(String[] args) {
         launch();
