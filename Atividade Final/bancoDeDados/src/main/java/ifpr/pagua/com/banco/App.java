@@ -1,35 +1,49 @@
 package ifpr.pagua.com.banco;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import java.io.IOException;
+import ifpr.pagua.com.banco.controllers.TelaInicial;
+import ifpr.pagua.com.banco.utils.BaseAppNavigator;
+import ifpr.pagua.com.banco.utils.ScreenRegistryFXML;
 
 /**
  * JavaFX App
  */
-public class App extends Application {
-
-    private static Scene scene;
+public class App extends BaseAppNavigator {
 
     @Override
-    public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.setScene(scene);
-        stage.show();
+    public void init() throws Exception {
+        super.init();
+
+        // carregar
     }
 
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+    @Override
+    public void stop() throws Exception {
+        // TODO Auto-generated method stub
+        super.stop();
+
+        // salvar
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
+    @Override
+    public String getHome() {
+        return "TELAINICIAL";
     }
+
+    @Override
+    public String getAppTitle() {
+        return "CONTATOS";
+    }
+
+    @Override
+    public void registrarTelas() {
+        registraTela("TELAINICIAL", new ScreenRegistryFXML(App.class,
+                "primary.fxml", o -> new TelaInicial()));
+
+    }
+
+    // public void atualizaEstilo() {
+    // adicionarArquivoEstilo(getClass().getResource("styles/global.css").toExternalForm());
+    // }
 
     public static void main(String[] args) {
         launch();
