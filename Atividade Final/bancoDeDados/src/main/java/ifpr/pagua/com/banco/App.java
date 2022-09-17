@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import ifpr.pagua.com.banco.DAO.ConnectionFactory;
 import ifpr.pagua.com.banco.DAO.ContatoDAO;
 import ifpr.pagua.com.banco.controllers.CadastroContato;
+import ifpr.pagua.com.banco.controllers.ListaContato;
 import ifpr.pagua.com.banco.controllers.TelaInicial;
 import ifpr.pagua.com.banco.models.Contato;
 import ifpr.pagua.com.banco.utils.BaseAppNavigator;
@@ -51,6 +52,7 @@ public class App extends BaseAppNavigator {
                 "TelaInicial.fxml", o -> new TelaInicial()));
 
         registraTela("CADASTRO", new ScreenRegistryFXML(App.class, "CadastroContato.fxml", o -> new CadastroContato()));
+        registraTela("LISTA_CONTATO", new ScreenRegistryFXML(App.class, "ListaContato.fxml", o -> new ListaContato()));
     }
 
     public void atualizaEstilo() {

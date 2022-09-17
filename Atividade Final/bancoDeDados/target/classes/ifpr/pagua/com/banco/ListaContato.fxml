@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ifpr.pagua.com.banco.controllers.ListaContato">
+      <VBox style="-fx-alignment: center; -fx-spacing:20;">
+            <Label text="Lista" />
+            <ListView fx:id="listaContatos"/>
+            <HBox>
+                <Button text="Editar" onAction="#mostrarOpcoesDeEdicao"/>
+                <Button text="Excluir" onAction="#excluirContato"/>
+            </HBox>
+      </VBox>
+      
+</VBox>
