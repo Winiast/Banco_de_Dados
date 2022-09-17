@@ -1,7 +1,13 @@
 package ifpr.pagua.com.banco;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import ifpr.pagua.com.banco.DAO.ConnectionFactory;
+import ifpr.pagua.com.banco.DAO.ContatoDAO;
 import ifpr.pagua.com.banco.controllers.CadastroContato;
 import ifpr.pagua.com.banco.controllers.TelaInicial;
+import ifpr.pagua.com.banco.models.Contato;
 import ifpr.pagua.com.banco.utils.BaseAppNavigator;
 import ifpr.pagua.com.banco.utils.ScreenRegistryFXML;
 
@@ -13,7 +19,11 @@ public class App extends BaseAppNavigator {
     @Override
     public void init() throws Exception {
         super.init();
-
+        Contato zefim = new Contato("Zefim", "4199232", "zezim@gmail.com");
+        ConnectionFactory conexao = new ConnectionFactory();
+        System.out.println(conexao.getConnection());
+        ContatoDAO novoMenino = new ContatoDAO();
+        novoMenino.insert(zefim);
         // carregar
     }
 
