@@ -12,7 +12,7 @@ public class ContatoDAO extends ConnectionFactory {
             conexao = getConnection();
             String sql = "INSERT INTO atividade_final_agenda (nome) VALUES (?);";
             PreparedStatement stmt = conexao.prepareStatement(sql);
-            stmt.setString(1, "Zefinho");
+            stmt.setString(1, novoContato.getNome());
             stmt.execute();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
