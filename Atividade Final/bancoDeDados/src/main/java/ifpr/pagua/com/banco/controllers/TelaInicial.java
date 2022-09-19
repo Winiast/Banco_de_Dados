@@ -5,11 +5,11 @@ import javafx.event.ActionEvent;
 
 public class TelaInicial {
 
-    public void mudaTelaParaCadastro(ActionEvent event) {
-        App.pushScreen("CADASTRO");
+    public void mudaTelaParaCadastroNome(ActionEvent event) {
+        App.pushScreen("CADASTRO_NOME");
     }
 
-    public void mudaTelaParaLista(ActionEvent event) {
-        App.pushScreen("LISTA_CONTATO");
+    public void mudaTelaParaListaContato(ActionEvent event) {
+        App.pushScreen("LISTA_NOMES");
     }
 }

@@ -1,12 +1,9 @@
 package ifpr.pagua.com.banco;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
 import ifpr.pagua.com.banco.DAO.ConnectionFactory;
-import ifpr.pagua.com.banco.DAO.ContatoDAO;
-import ifpr.pagua.com.banco.controllers.CadastroContato;
-import ifpr.pagua.com.banco.controllers.ListaContato;
+import ifpr.pagua.com.banco.DAO.NomeDAO;
+import ifpr.pagua.com.banco.controllers.CadastraNome;
+import ifpr.pagua.com.banco.controllers.ListaNomes;
 import ifpr.pagua.com.banco.controllers.TelaInicial;
 import ifpr.pagua.com.banco.models.Contato;
 import ifpr.pagua.com.banco.utils.BaseAppNavigator;
@@ -20,12 +17,12 @@ public class App extends BaseAppNavigator {
     @Override
     public void init() throws Exception {
         super.init();
-        Contato zefim = new Contato("Zefim", "4199232", "zezim@gmail.com");
-        ConnectionFactory conexao = new ConnectionFactory();
-        System.out.println(conexao.getConnection());
-        ContatoDAO novoMenino = new ContatoDAO();
-        novoMenino.insert(zefim);
-        // carregar
+        // Contato zefim = new Contato("Zefim", "4199232", "zezim@gmail.com");
+        // ConnectionFactory conexao = new ConnectionFactory();
+        // System.out.println(conexao.getConnection());
+        // NomeDAO novoMenino = new NomeDAO();
+        // novoMenino.insert(zefim);
+        // // carregar
     }
 
     @Override
@@ -50,9 +47,10 @@ public class App extends BaseAppNavigator {
     public void registrarTelas() {
         registraTela("TELAINICIAL", new ScreenRegistryFXML(App.class,
                 "TelaInicial.fxml", o -> new TelaInicial()));
-
-        registraTela("CADASTRO", new ScreenRegistryFXML(App.class, "CadastroContato.fxml", o -> new CadastroContato()));
-        registraTela("LISTA_CONTATO", new ScreenRegistryFXML(App.class, "ListaContato.fxml", o -> new ListaContato()));
+        registraTela("CADASTRO_NOME", new ScreenRegistryFXML(App.class,
+                "CadastraNome.fxml", o -> new CadastraNome()));
+        registraTela("LISTA_NOMES", new ScreenRegistryFXML(App.class,
+                "ListaNomes.fxml", o -> new ListaNomes()));
     }
 
     public void atualizaEstilo() {

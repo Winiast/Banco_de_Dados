@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import ifpr.pagua.com.banco.models.Contato;
 
-public class ContatoDAO extends ConnectionFactory {
+public class NomeDAO extends ConnectionFactory {
 
     public void insert(Contato novoContato) {
         try {
@@ -18,6 +18,11 @@ public class ContatoDAO extends ConnectionFactory {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+        // INSERT INTO atividade_final_agenda (nome) VALUES ('TESTE');
+        // INSERT INTO atividade_final_email (email_contato, codigo_email) VALUES
+        // ('teste@gmail.com');
+        // INSERT INTO atividade_final_telefone (telefone) VALUES ('419999991');
     }
 
     public void delete(Contato novoContato) {
