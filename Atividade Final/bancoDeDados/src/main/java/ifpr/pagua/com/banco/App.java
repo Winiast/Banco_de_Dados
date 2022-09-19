@@ -1,11 +1,10 @@
 package ifpr.pagua.com.banco;
 
-import ifpr.pagua.com.banco.DAO.ConnectionFactory;
-import ifpr.pagua.com.banco.DAO.NomeDAO;
+import ifpr.pagua.com.banco.controllers.AcoesEmail;
+import ifpr.pagua.com.banco.controllers.CadastraEmail;
 import ifpr.pagua.com.banco.controllers.CadastraNome;
 import ifpr.pagua.com.banco.controllers.ListaNomes;
 import ifpr.pagua.com.banco.controllers.TelaInicial;
-import ifpr.pagua.com.banco.models.Contato;
 import ifpr.pagua.com.banco.utils.BaseAppNavigator;
 import ifpr.pagua.com.banco.utils.ScreenRegistryFXML;
 
@@ -51,6 +50,10 @@ public class App extends BaseAppNavigator {
                 "CadastraNome.fxml", o -> new CadastraNome()));
         registraTela("LISTA_NOMES", new ScreenRegistryFXML(App.class,
                 "ListaNomes.fxml", o -> new ListaNomes()));
+        registraTela("ACOES_EMAIL", new ScreenRegistryFXML(App.class,
+                "AcoesEmail.fxml", o -> new AcoesEmail()));
+        registraTela("CADASTRA_EMAIL", new ScreenRegistryFXML(App.class,
+                "CadastraEmail.fxml", o -> new CadastraEmail()));
     }
 
     public void atualizaEstilo() {

@@ -12,7 +12,7 @@ public class ListaNomes {
     ListView<Nomes> nome;
 
     public void acoesDeEmail(ActionEvent e) {
-        System.out.println("Acoes de email");
+        App.pushScreen("ACOES_EMAIL");
     }
 
     public void acoesDeTelefone(ActionEvent e) {

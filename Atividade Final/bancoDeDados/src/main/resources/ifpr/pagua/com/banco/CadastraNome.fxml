@@ -11,7 +11,7 @@
       <VBox style="-fx-alignment: center; -fx-spacing:20; -fx-max-width:300;"  >
             <Label text="NOME" />
             <TextField fx:id="nomeContato"/>
-            <HBox style="-fx-aligment:center; -fx-spacing: 20;">
+            <HBox style="-fx-alignment:center; -fx-spacing: 20;">
                 <Button text="CADASTRAR" onAction="#cadastraNome"/>
                 <Button text="VOLTAR" onAction="#voltarTela"/>
             </HBox>

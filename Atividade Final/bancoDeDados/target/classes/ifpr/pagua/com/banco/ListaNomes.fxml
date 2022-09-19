@@ -13,12 +13,13 @@
             <Label text="CONTATOS CADASTRADOS"/>
 
             <ListView fx:id="listaContatos" />
-            <HBox style="-fx-aligment:center; -fx-spacing: 10;">
+            <HBox style="-fx-alignment:center; -fx-spacing: 10;">
                 <Button text="ACÕES DE EMAIL" onAction="#acoesDeEmail"/>
                 <Button text="AÇÕES DE TELEFONE" onAction="#acoesDeTelefone"/>
                 <Button text="EXCLUIR" onAction="#excluirNome"/>
-                <Button text="VOLTAR" onAction="#voltarTela"/>
+                
             </HBox>
+            <Button text="VOLTAR" onAction="#voltarTela"/>
 
             
 
