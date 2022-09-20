@@ -38,13 +38,13 @@ public class ListaNomes implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+        nomesView = new NomeDAO();
         try {
             listaContatos.getItems().clear();
             listaContatos.getItems().addAll(nomesView.list());
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
 }

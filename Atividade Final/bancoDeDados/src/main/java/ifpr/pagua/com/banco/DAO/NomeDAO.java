@@ -5,7 +5,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import ifpr.pagua.com.banco.models.Contato;
 import ifpr.pagua.com.banco.models.Nomes;
 
 public class NomeDAO extends ConnectionFactory {
@@ -28,10 +27,14 @@ public class NomeDAO extends ConnectionFactory {
         // INSERT INTO atividade_final_telefone (telefone) VALUES ('419999991');
     }
 
-    public void delete(Contato novoContato) {
+    public void delete(int codigoParaExcluir) throws SQLException {
+        String sql = "DELETE FROM atividade_final_agenda WHERE codigo_nome = ?";
+        PreparedStatement stmt = getConnection().prepareStatement(sql);
+        stmt.setInt(1, codigoParaExcluir);
+        stmt.execute();
     }
 
-    public void update(Contato novoContato) {
+    public void update() {
     }
 
     public ArrayList<Nomes> list() throws SQLException {
@@ -47,22 +50,5 @@ public class NomeDAO extends ConnectionFactory {
         stmt.close();
         return nomesAtuais;
     }
-
-    // public ArrayList<Email> pesquisa(PreparedStatement statement) throws
-    // SQLException {
-    // ArrayList<Email> emails = new ArrayList<Email>();
-
-    // statement.execute();
-    // ResultSet resultSet = statement.getResultSet();
-
-    // while (resultSet.next()) {
-    // int codigo = resultSet.getInt("codigo_agenda");
-    // String email = resultSet.getString("email");
-
-    // emails.add(new Email(codigo, email));
-    // }
-    // statement.close();
-    // return emails;
-    // }
 
 }

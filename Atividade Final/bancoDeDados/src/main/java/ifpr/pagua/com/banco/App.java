@@ -16,6 +16,7 @@ public class App extends BaseAppNavigator {
     @Override
     public void init() throws Exception {
         super.init();
+
         // Contato zefim = new Contato("Zefim", "4199232", "zezim@gmail.com");
         // ConnectionFactory conexao = new ConnectionFactory();
         // System.out.println(conexao.getConnection());
