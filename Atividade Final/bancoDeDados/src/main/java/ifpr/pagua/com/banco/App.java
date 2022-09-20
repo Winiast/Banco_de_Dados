@@ -1,6 +1,7 @@
 package ifpr.pagua.com.banco;
 
 import ifpr.pagua.com.banco.controllers.AcoesEmail;
+import ifpr.pagua.com.banco.controllers.AcoesTelefone;
 import ifpr.pagua.com.banco.controllers.CadastraEmail;
 import ifpr.pagua.com.banco.controllers.CadastraNome;
 import ifpr.pagua.com.banco.controllers.ListaNomes;
@@ -55,6 +56,8 @@ public class App extends BaseAppNavigator {
                 "AcoesEmail.fxml", o -> new AcoesEmail()));
         registraTela("CADASTRA_EMAIL", new ScreenRegistryFXML(App.class,
                 "CadastraEmail.fxml", o -> new CadastraEmail()));
+        registraTela("ACOES_TELEFONE",
+                new ScreenRegistryFXML(App.class, "AcoesTelefone.fxml", o -> new AcoesTelefone()));
     }
 
     public void atualizaEstilo() {

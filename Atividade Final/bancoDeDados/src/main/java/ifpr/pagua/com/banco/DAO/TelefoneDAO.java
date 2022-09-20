@@ -28,7 +28,7 @@ public class TelefoneDAO extends ConnectionFactory {
 
     }
 
-    public void delete(String emailParaExcluir) throws SQLException {
+    public void delete(int telefoneParaExcluir) throws SQLException {
         // String sql = "DELETE FROM atividade_final_email WHERE email = ?";
         // PreparedStatement stmt = getConnection().prepareStatement(sql);
         // stmt.setString(1, emailParaExcluir);

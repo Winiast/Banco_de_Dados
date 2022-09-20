@@ -22,7 +22,7 @@ public class ListaNomes implements Initializable {
     }
 
     public void acoesDeTelefone(ActionEvent e) {
-        System.out.println("Acoes de telefone");
+        App.pushScreen("ACOES_TELEFONE");
     }
 
     public void excluirNome(ActionEvent e) throws SQLException {

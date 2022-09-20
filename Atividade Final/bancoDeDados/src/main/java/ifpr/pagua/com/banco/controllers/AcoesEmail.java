@@ -32,7 +32,7 @@ public class AcoesEmail implements Initializable {
     }
 
     public void voltarTela(ActionEvent e) {
-        App.popScreen();
+        App.pushScreen("LISTA_NOMES");
     }
 
     public EmailDAO emailDAO = new EmailDAO();
