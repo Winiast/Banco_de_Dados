@@ -29,7 +29,7 @@ public class Nomes {
     @Override
     public String toString() {
         String str = "";
-        str += nome + " | " + codigo_nome + "\n";
+        str += "Codigo: " + codigo_nome + " | " + "Nome: " + nome + "\n";
         return str;
     }
 

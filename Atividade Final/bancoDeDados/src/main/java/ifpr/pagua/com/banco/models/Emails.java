@@ -26,4 +26,11 @@ public class Emails {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        String str = "";
+        str += "Codigo: " + codigo_email + " | Email: " + email + "\n";
+        return str;
+    }
+
 }

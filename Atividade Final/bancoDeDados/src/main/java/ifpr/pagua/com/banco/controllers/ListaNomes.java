@@ -25,20 +25,21 @@ public class ListaNomes implements Initializable {
         System.out.println("Acoes de telefone");
     }
 
-    public void excluirNome(ActionEvent e) {
-        System.out.println("excluir nome");
+    public void excluirNome(ActionEvent e) throws SQLException {
+        nomesView.delete(listaContatos.getSelectionModel().getSelectedItem().getCodigo_nome());
+        listaContatos.getItems().clear();
+        listaContatos.getItems().addAll(nomesView.list());
     }
 
     public void voltarTela(ActionEvent e) {
         App.popScreen();
     }
 
-    public NomeDAO nomesView;
+    public NomeDAO nomesView = new NomeDAO();
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
-        nomesView = new NomeDAO();
         try {
             listaContatos.getItems().clear();
             listaContatos.getItems().addAll(nomesView.list());

@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import ifpr.pagua.com.banco.models.Nomes;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 public class NomeDAO extends ConnectionFactory {
 
@@ -16,6 +18,8 @@ public class NomeDAO extends ConnectionFactory {
             PreparedStatement stmt = conexao.prepareStatement(sql);
             stmt.setString(1, novoNome);
             stmt.execute();
+            Alert alerta = new Alert(AlertType.CONFIRMATION, "Cadastrado com sucesso!");
+            alerta.show();
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -28,10 +32,12 @@ public class NomeDAO extends ConnectionFactory {
     }
 
     public void delete(int codigoParaExcluir) throws SQLException {
-        String sql = "DELETE FROM atividade_final_agenda WHERE codigo_nome = ?";
+        String sql = "DELETE FROM atividade_final_agenda WHERE codigo_agenda = ?";
         PreparedStatement stmt = getConnection().prepareStatement(sql);
         stmt.setInt(1, codigoParaExcluir);
         stmt.execute();
+        Alert alerta = new Alert(AlertType.CONFIRMATION, "Deletado com sucesso!");
+        alerta.show();
     }
 
     public void update() {
